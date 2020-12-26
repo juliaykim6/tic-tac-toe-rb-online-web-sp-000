@@ -43,3 +43,31 @@ def turn(board)
     turn(board)
   end
 end
+# Define your play method below
+def play(board)
+  move = 0
+  while move <= 8
+    turn(board)
+    move += 1
+  end
+end
+
+
+def turn_count(board)
+  counter = 0
+  board.each do |space|
+    if space == "X" || space == "O"
+    counter += 1
+end
+end
+counter
+end
+
+def current_player(board)
+  if turn_count(board).even?
+    return "X"
+  else
+    return "O"
+  end
+end
+
